@@ -1,5 +1,6 @@
 package test;
 
+import dataStructure.tree.AVLTree;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -52,6 +53,10 @@ public class Test {
 
     private static final String BGID = "bgid";
     public static void main (String[] args) {
+        AVLTree<Integer> avlTree = new AVLTree<>(3);
+        avlTree.toTreeString();
+        System.out.println("height" + avlTree.getHeight());
+        System.out.println();
         System.out.println(HashUtils.hashMod("1135373949589958", 512));
         System.out.println(HashUtils.imohashMod("1100061474233456", 3));
         System.out.println(HashUtils.imohashMod("ds.202153691160991540", 128));
